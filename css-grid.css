@@ -1,0 +1,62 @@
+/*
+    Em um GRID de uma página, é comum utilizar tanto
+    css grid quanto flex box. A intenção é fazer a estruturação
+    da página com o css grid e organização o fluxo do conteúdo com
+    flex.
+*/
+
+body {
+    background-color: #444;
+    color: #fffff8;
+    font-size: 27px;
+}
+
+.container {
+    display: grid;
+    width: 80vw;
+    /* width: 100%; */
+    margin: auto;
+    /* O número de colunas e tamanho é definido de acordo com o número
+    de entradas. Neste caso, eu possuo duas colunas de 35vw.
+    É importante enfatizar que a soma das colunas precisa ser no máximo
+    o tamanho do width do element. Neste caso 70 vw de coluna ao todo e mais
+    10vw de margem*/
+    grid-template-columns: 35vw 35vw;
+    /* grid-template-columns: 50% 50%; */
+    /* grid-template-columns: 300px 300px 200px; */
+    /* A mesma lógica é seguida aqui, eu possuo duas linhas de 45vh. */
+    grid-template-rows: 45vh 45vh 10vh;
+    /* grid-template-rows: 600px 250px 60px; */
+    /* Este é o espaçamento entre as colunas e linhas */
+    grid-gap: 15px;
+    grid-template-areas: "carousel carousel" "content advert" "footer footer";
+    border: 2px solid red;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    /* aling-items e justify-content com a propriedade center
+    irá manter no meio o conteúdo. Isto porque será alinhado, respectivamente,
+    na vertical e depois horizontal */
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid blue;
+}
+
+#carousel {
+    grid-area: carousel;
+}
+
+#content {
+    grid-area: content;
+}
+
+#advert {
+    grid-area: advert;
+}
+
+#footer {
+    grid-area: footer;
+}

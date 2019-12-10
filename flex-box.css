@@ -1,0 +1,93 @@
+/*
+    Direção e alinhamento:
+    justify-content: utilizando para alinhar os componentes que estão na horizontal (main-axis)
+    align-items: utilizando para alinhar os componentes que estão vertical (cross-axis)
+
+    Ou seja, quando eu utilizo como direção row, eu consigo alinhar os items com o justify-content, uma vez
+    que eles estão enfileirados na horizontal, como uma linha.
+
+    Quando estou utilizando como direção column, eu preciso utilizar o align-items para alinhar os elementos,
+    uma vez que eles estão colocados na vertical, como uma coluna.
+
+    Ou seja, se eu utilizar flex-direction: row e align-items: center não irá funcionar, eu preciso utilizar
+    justify-content: center. Da mesmo forma, se eu utilizar flex-direction: column e justify-content: center
+    não irá funcionar, eu preciso utilizar align-items: center.
+
+    Main-axes (enfileiramento horizontal de elementos filhos):
+    flex-direction: row;
+    flex-direction: row-reverse; -> para a ordem contrária dos elementos filhos
+
+    Cross-axes (enfileiramento vertical de elementos filhos):
+    flex-direction: column;
+    flex-direction: column-reverse; -> para a ordem contrária dos elementos filhos
+
+    Valores possíveis para align-items (cross-axes):
+        - stretch
+        - flex-start
+        - flex-end
+        - center
+
+    Valores possíveis para justify-content (main-axes):
+        - start (flex-start)
+        - flex-end
+        - center
+        - space-around
+        - space-between
+        - space-evenly
+
+    ----------------------------------------------------------
+    Ordenação:
+    Existem três formas de mudar a ordem dos elementos filhos:
+
+    1. Alterando a ordem no código HTML, esta é a forma mais simples.
+    2. utilizando a palavra "reverse" em column ou row, como visto anteriormente.
+    3. utilizando a propriedade order nos items dentro da grid.
+*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* align-items: center; */
+    /* align-items: stretch; */
+    /* justify-content: baseline; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    border: 2px solid red;
+}
+
+.box {
+    width: 250px;
+    height: 150px;
+    border: 1px solid blue;
+}
+
+#one {
+    order: 1
+    /* order: 2 */
+}
+
+#two {
+    order: 2
+    /* order: 3 */
+}
+
+#three {
+    order: 3
+    /* order: 1 */
+}
+
+#four {
+    order: 4
+    /* order: 1 */
+}
+
+#five {
+    order: 5
+    /* order: 1 */
+}
