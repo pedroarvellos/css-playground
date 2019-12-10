@@ -11,7 +11,6 @@ body {
     margin: auto;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px 100px 40px;
-    grid-gap: 8px;
     justify-content: center;
 }
 
@@ -23,31 +22,18 @@ body {
     border: 1px solid pink;
 }
 
-#menu {
+#header {
     grid-column: span 12;
+}
+
+#menu {
+    grid-column: span 4;
 }
 
 #content {
-    /* grid-area: content; */
-    grid-column: span 2;
-}
-
-#sidebar {
-    /* grid-area: sidebar; */
-    grid-column: span 12;
-}
-
-#advert {
-    /* grid-area: advert; */
-    grid-column: span 12;
+    grid-column: span 8;
 }
 
 #footer {
-    /* grid-area: footer; */
     grid-column: span 12;
-}
-
-#logo {
-    /* grid-area: logo; */
-    grid-column: span 1;
 }
