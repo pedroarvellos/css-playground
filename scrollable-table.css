@@ -1,5 +1,12 @@
+.table_container {
+    overflow-x: auto;
+    height: auto;
+}
+
 .fixed_header {
-    width: 400px;
+    min-width: 380px;
+    width: 100%;
+    border-spacing: 0;
     table-layout: fixed;
     border-collapse: collapse;
 }
@@ -11,17 +18,36 @@
     height: 100px;
 }
 
-.fixed_header thead tr {
-    display: block;
+.fixed_header tbody tr {
+    transition: .3s ease;
 }
 
-.fixed_header thead {
-    background: black;
-    color: #fff;
+.fixed_header tbody tr:hover {
+    background-color: #f6f6f6;
+}
+
+.fixed_header thead tr {
+    display: block;
 }
 
 .fixed_header th, .fixed_header td {
     padding: 5px;
     text-align: left;
     width: 200px;
+}
+
+.fixed_header th {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 5px;
+}
+
+.fixed_header td {
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    min-width: 180px;
+}
+
+.fixed_header td:last-child {
+    min-width: 50px;
 }
