@@ -1,0 +1,150 @@
+body {
+    font-size: 27px;
+    background-color: #F0F0F0;
+}
+
+.container {
+    display: grid;
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "banner banner banner banner" "blog blog blog sidebar" "footer footer footer footer";
+    justify-content: center;
+    background-color: white;
+    /* border: 2px solid red; */
+}
+
+#banner {
+    grid-area: banner;
+    flex-direction: row;
+    justify-content: left;
+    width: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #E0E0EB;
+    padding: 25px;
+    /* border: 2px solid red; */
+}
+
+#banner h1 {
+    font-size: 35px;
+    font-family: Montserrat, Verdana;
+    color: black;
+}
+
+#blog {
+    grid-area: blog;
+    /* border: 2px solid red; */
+}
+
+#blog h2 {
+    font-size: 25px;
+    font-family: Montserrat, Verdana;
+    color: black;
+    margin: 2px;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+#footer {
+    grid-area: footer;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: auto;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    font-family: Nanum Gothic, Verdana
+}
+
+#contentbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    font-family: Nanum Gothic, Verdana;
+}
+
+#blogbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    font-family: Nanum Gothic, Verdana;
+}
+
+#blogbox a {
+    color: black;
+    text-decoration: none;
+}
+
+#blogbox:hover {
+    background-color: #E0E0EB;
+}
+
+#imagecontainer {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 400px;
+}
+
+.images {
+    width: 45%;
+}
+
+.superman {
+    background-image: url('https://d1w8cc2yygc27j.cloudfront.net/-2077776892287705761/-2092878173678620929.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.batman {
+    background-image: url('https://images.fineartamerica.com/images-medium-5/dark-knight-rises-cracked-glass-logo-transparent.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wonderwoman {
+    background-image: url('https://cdn.shopify.com/s/files/1/0190/3868/products/PEWTER_LAPEL_PIN-_WONDER_WOMAN_MOVIE_WONDER_WOMAN_LOGO_MONOGRAM_PRODUCTS_1024x1024.jpg?v=1514749915');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.greenlantern {
+    background-image: url('https://cdn10.bigcommerce.com/s-yhxhf/products/6009/images/11133/15C040__90887.1430169129.600.600.png?c=2');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media(max-width: 1700px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "banner banner" "blog blog" "sidebar sidebar" "footer footer";
+    }
+}
