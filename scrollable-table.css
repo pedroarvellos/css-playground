@@ -3,7 +3,6 @@ body {
 }
 
 .container {
-    /* border: 1px solid #e0dddddc; */
     max-width: 100%;
     overflow-x: auto;
     display: inline-block;
