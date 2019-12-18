@@ -46,6 +46,12 @@ body {
     width: 100%;
 }
 
+
+/* Compensate vertical scrollbar size */
+.table-container thead th:last-child{
+    margin-right: 5px;
+}
+
 .table-container th, .table-container td {
     text-align: left;
     width: 100%;
@@ -59,11 +65,6 @@ body {
 .table-container td {
     padding: 10px 5px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Compensate vertical scrollbar size */
-.table-container thead th:last-child{
-    margin-right: 5px;
 }
 
 .table-container tbody::-webkit-scrollbar-track, .container::-webkit-scrollbar-track {
